@@ -1,2 +1,2 @@
 Atividade de ESDA
-Desenvolvido por Kauan Mariani Ferreira e Guilherme Carvalho Cunha
+Desenvolvido por Kauan Mariani Ferreira, Guilherme Carvalho Cunha e Luis Felipe Abreu Marciano
