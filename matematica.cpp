@@ -8,7 +8,8 @@ using std::string;
 int pow(int, int);
 int fatorial_iterativo(int );
 float ProgressaoAritmetica(float, float, int);
-int fibonacci(int)
+int fibonacci(int);
+int numDigitos(float);
 
 int main() {
     // Primeira função
@@ -60,6 +61,16 @@ int fibonacci(int iNumValores)
         iSegundoValor = iUltimoValor;
     }
         
-    return iUltimoValor;
+    return iUltimoValor;
 }
 
+int numDigitos(float fNumero)
+{
+    int iNumDigitos = 0;
+    while (fNumero >= 1)
+    {
+        fNumero /= 10; 
+        iNumDigitos += 1; 
+    }
+    return iNumDigitos; 
+}
