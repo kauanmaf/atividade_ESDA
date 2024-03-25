@@ -9,20 +9,30 @@ int pow(int, int);
 int fatorial_iterativo(int );
 float ProgressaoAritmetica(float, float, int);
 int fibonacci(int);
-int numDigitos(float);
+int numDigitos(int);
 
 int main() {
     // Primeira função
     int iresult1 = pow(2, 3); 
-    std::cout << "2^3 = " << iresult1 << std::endl;
+    cout << "2^3 = " << iresult1 << endl;
 
     // Segunda função
     int iresult2 = fatorial_iterativo(5); 
-    std::cout << "5! = " << iresult2 << std::endl;
-    return 0;
+    cout << "5! = " << iresult2 << endl;
 
     // Terceira Função
+    float fresult3 = ProgressaoAritmetica(2.0, 3.0, 4); 
+    cout << "O quarto elemento da progressão aritmética é: " << fresult3 << endl;
 
+    // Quarta função
+    int iresult4 = fibonacci(10); 
+    cout << "O 10º termo da sequência de Fibonacci é: " << iresult4 << endl;
+
+    // Quinta função
+    int iresult5 = numDigitos(1234); 
+    cout << "O número de dígitos em 1234 é: " << iresult5 << endl;
+
+    return 0;
 }
 
 int pow(int iBase, int iExpoente) {
@@ -52,9 +62,9 @@ int fibonacci(int iNumValores)
     int iValorInicial = 0;
     int iSegundoValor = 1;
     int iUltimoValor;
-    int iIteração;
+    int iIteracao;
     
-    for(iIteração = 2; iIteração<=iNumValores ; iIteração++)
+    for(iIteracao = 2; iIteracao<=iNumValores ; iIteracao++)
     {
         iUltimoValor = iValorInicial + iSegundoValor;
         iValorInicial = iSegundoValor;
@@ -64,13 +74,11 @@ int fibonacci(int iNumValores)
     return iUltimoValor;
 }
 
-int numDigitos(float fNumero)
-{
+int numDigitos(int iNumero) {
     int iNumDigitos = 0;
-    while (fNumero >= 1)
-    {
-        fNumero /= 10; 
-        iNumDigitos += 1; 
+    while (iNumero > 0) {
+        iNumero /= 10;
+        iNumDigitos += 1;
     }
-    return iNumDigitos; 
+    return iNumDigitos;
 }
